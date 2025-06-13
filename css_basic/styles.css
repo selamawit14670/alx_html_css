@@ -1,9 +1,11 @@
-/* Flexbox Layout for Desktop */
-
+/* Layout: Keep from previous step */
 body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
 main {
@@ -16,20 +18,49 @@ main {
 article {
   flex: 2;
   overflow-y: auto;
-  padding: 10px;
-  background-color: #f9f9f9;
+  padding: 20px;
+  background-color: #ffffff;
+  border-right: 2px solid #ccc;
 }
 
 aside {
   flex: 1;
   overflow-y: auto;
-  padding: 10px;
-  background-color: #e6f2ff;
+  padding: 20px;
+  background-color: #eaf6ff;
 }
 
-header, footer {
-  background-color: #333;
+/* Header and Footer */
+header {
+  background-color: #1e1e1e;
   color: white;
-  padding: 20px;
+  padding: 10px;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+header li {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 24px;
+  margin-right: auto;
+  color: gold;
+}
+
+footer {
+  background-color: #1e1e1e;
+  color: white;
   text-align: center;
+  padding: 10px;
 }
