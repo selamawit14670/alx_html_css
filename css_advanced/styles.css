@@ -1,67 +1,58 @@
-/* Membership Section */
-.membership-section {
-  background-color: #fefefe; /* Replace with Figma background color */
+/* FAQ Section */
+.faq-section {
+  background-color: #fafafa; /* Adjust based on Figma */
   padding: 80px 20px;
-  text-align: center;
 }
 
-.membership-description {
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item + .faq-item {
+  margin-top: 20px;
+}
+
+.faq-question {
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 18px 25px;
   font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  color: #555;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
 }
 
-.membership-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
+.faq-question:hover,
+.faq-question[aria-expanded="true"] {
+  background-color: #e0f0ff; /* highlight color */
+  border-color: #007bff; /* accent color */
 }
 
-.membership-card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 30px 20px;
-  width: 300px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+.faq-question::after {
+  content: "+";
+  position: absolute;
+  right: 25px;
+  font-size: 24px;
+  line-height: 1;
   transition: transform 0.3s ease;
 }
 
-.membership-card:hover {
-  transform: translateY(-5px);
+.faq-question[aria-expanded="true"]::after {
+  content: "−";
+  transform: rotate(180deg);
 }
 
-.plan-title {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.plan-price {
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: #007BFF; /* Replace with your Figma primary */
-}
-
-.plan-features {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.plan-features li {
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.join-button {
-  display: inline-block;
-  padding: 12px 25px;
-  background-color: #007BFF; /* Replace with Figma CTA color */
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+.faq-answer {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 20px 25px;
+  font-size: 16px;
+  color: #555;
 }
