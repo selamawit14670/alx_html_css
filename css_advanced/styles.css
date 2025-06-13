@@ -1,39 +1,67 @@
-/* Videos List Section */
-.videos-section {
-  background-color: #ffffff; /* Change based on Figma */
+/* Membership Section */
+.membership-section {
+  background-color: #fefefe; /* Replace with Figma background color */
   padding: 80px 20px;
+  text-align: center;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
+.membership-description {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+.membership-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.membership-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 300px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.membership-card:hover {
+  transform: translateY(-5px);
+}
+
+.plan-title {
+  font-size: 24px;
+  margin-bottom: 10px;
   color: #222;
 }
 
-.videos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+.plan-price {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #007BFF; /* Replace with your Figma primary */
 }
 
-.video-card {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  padding-bottom: 20px;
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
-.video-thumbnail {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.video-title {
-  font-size: 18px;
-  padding: 15px 10px 0;
+.plan-features li {
+  margin-bottom: 10px;
   color: #333;
+}
+
+.join-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #007BFF; /* Replace with Figma CTA color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
