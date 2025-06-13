@@ -1,58 +1,63 @@
-/* FAQ Section */
-.faq-section {
-  background-color: #fafafa; /* Adjust based on Figma */
-  padding: 80px 20px;
+/* Footer */
+.site-footer {
+  background-color: #222222; /* Use Figma background color */
+  color: #ccc; /* Light text */
+  padding: 40px 20px;
+  font-size: 14px;
 }
 
-.faq-list {
-  max-width: 800px;
-  margin: 0 auto;
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.faq-item + .faq-item {
-  margin-top: 20px;
+.footer-logo img {
+  height: 40px;
+  width: auto;
 }
 
-.faq-question {
-  width: 100%;
-  background-color: #fff;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  padding: 18px 25px;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: left;
-  cursor: pointer;
-  position: relative;
-  transition: background-color 0.3s ease;
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
 }
 
-.faq-question:hover,
-.faq-question[aria-expanded="true"] {
-  background-color: #e0f0ff; /* highlight color */
-  border-color: #007bff; /* accent color */
+.footer-nav a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.faq-question::after {
-  content: "+";
-  position: absolute;
-  right: 25px;
-  font-size: 24px;
-  line-height: 1;
-  transition: transform 0.3s ease;
+.footer-nav a:hover {
+  color: #fff; /* Highlight on hover */
 }
 
-.faq-question[aria-expanded="true"]::after {
-  content: "−";
-  transform: rotate(180deg);
+.footer-socials {
+  display: flex;
+  gap: 15px;
 }
 
-.faq-answer {
-  background-color: #fff;
-  border: 2px solid #ddd;
-  border-top: none;
-  border-radius: 0 0 8px 8px;
-  padding: 20px 25px;
+.social-link {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: bold;
   font-size: 16px;
-  color: #555;
+}
+
+.social-link:hover {
+  color: #1da1f2; /* or Figma primary brand color */
+}
+
+.footer-copy {
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+  margin-top: 10px;
 }
