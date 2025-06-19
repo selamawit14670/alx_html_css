@@ -1,117 +1,141 @@
-/* Reset default browser styling */
-* {
+/* CSS Reset */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Set variables */
+/* CSS Variables */
 :root {
-  --main-color: #ffffff;
-  --accent-color: #ff6565;
-  --bg-image: url("images/headphones_hero_1.jpg");
-  --font-family: 'Source Sans Pro', sans-serif;
+  --color-primary: #FF6565;
+  --color-text: #333333;
+  --font-family-base: 'Source Sans Pro', sans-serif;
+  --max-width: 1000px;
+  --spacing: 1rem;
+  --btn-bg: var(--color-primary);
+  --btn-color: #fff;
 }
 
-/* Basic styling */
+/* Body base styles */
 body {
-  font-family: var(--font-family);
-  background-color: #000;
-  color: var(--main-color);
+  font-family: var(--font-family-base);
+  color: var(--color-text);
+  line-height: 1.5;
+  background-color: #f9f9f9;
 }
 
+/* Container to center content and limit max width */
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--spacing);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /* Header styles */
-.header {
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+.site-header {
+  background-color: white;
+  padding: var(--spacing) 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 /* Navigation */
 .nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 1.5rem;
 }
 
-.logo {
-  width: 160px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  color: var(--main-color);
+.nav-link {
+  color: var(--color-text);
   text-decoration: none;
-  transition: color 0.3s;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links a:active {
-  color: var(--accent-color);
+.nav-link:hover,
+.nav-link:active {
+  color: var(--color-primary);
 }
 
-/* Hero text */
-.hero {
-  text-align: center;
-  margin-top: 100px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 30px;
-}
-
-/* Button */
+/* Buttons */
 .btn {
-  background-color: var(--accent-color);
-  color: white;
-  padding: 15px 30px;
-  text-decoration: none;
-  font-weight: bold;
+  cursor: pointer;
+  border: none;
   border-radius: 4px;
-  transition: opacity 0.3s;
+  padding: 0.6rem 1.2rem;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
 }
 
-.btn:hover,
-.btn:active {
+.btn-primary {
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
   opacity: 0.9;
 }
 
-/* Responsive */
+/* Hero section */
+.hero {
+  background-color: white;
+  padding: 4rem 0;
+  text-align: left;
+}
+
+.hero-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--color-text);
+}
+
+.hero-text {
+  font-size: 1.125rem;
+  color: #555;
+}
+
+/* Responsive - Mobile styles */
 @media (max-width: 480px) {
-  .nav-links {
-    display: none;
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .hero h1 {
-    font-size: 2rem;
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: var(--spacing);
   }
 
-  .hero p {
-    font-size: 1rem;
+  .hero {
+    padding: 2rem 1rem;
   }
 
-  .btn {
-    padding: 12px 25px;
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
   }
 }
+
