@@ -1,0 +1,88 @@
+/* Include font-face for custom font icons */
+@font-face {
+  font-family: 'HolbertonIcons';
+  src: url('./fonts/holberton_school-icons.woff2') format('woff2'),
+       url('./fonts/holberton_school-icons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Base styles (copy from previous task) */
+/* ... your reset, variables, container styles ... */
+
+/* What We Do Section */
+
+.what-we-do {
+  background-color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* Features container */
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: var(--max-width, 1000px);
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.feature {
+  flex: 1 1 30%;
+  background-color: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.icon {
+  font-family: 'HolbertonIcons';
+  font-size: 3rem;
+  color: var(--color-primary, #FF6565);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Example icon classes from font demo page */
+.icon-speaker::before {
+  content: '\e900'; /* replace with actual icon code */
+}
+
+.icon-headphones::before {
+  content: '\e901'; /* replace with actual icon code */
+}
+
+.icon-battery::before {
+  content: '\e902'; /* replace with actual icon code */
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.feature-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive styles */
+
+@media (max-width: 480px) {
+  .features {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .feature {
+    flex: 1 1 100%;
+  }
+}
