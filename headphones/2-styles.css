@@ -1,0 +1,57 @@
+/* Base styles - copy from previous task */
+
+/* Our Results Section */
+
+.our-results {
+  background-color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.our-results .section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.results {
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--max-width, 1000px);
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.result-card {
+  flex: 1 1 22%;
+  background-color: #f8f8f8;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.result-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--color-primary, #FF6565);
+  margin-bottom: 0.5rem;
+}
+
+.result-label {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive for mobile */
+
+@media (max-width: 480px) {
+  .results {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .result-card {
+    flex: 1 1 100%;
+  }
+}
