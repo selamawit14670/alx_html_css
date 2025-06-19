@@ -1,0 +1,80 @@
+/* Base styles from previous task copied here */
+/* ... your CSS reset, variables, container, and previous section styles ... */
+
+/* Contact Us Section */
+.contact-us {
+  background-color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.contact-us .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--color-text, #333);
+}
+
+.contact-form {
+  max-width: var(--max-width, 1000px);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text, #333);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: var(--font-family-base, Arial, sans-serif);
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: var(--color-primary, #FF6565);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary, #FF6565);
+  color: var(--btn-color, #fff);
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  opacity: 0.9;
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 0 1rem;
+  }
+}
