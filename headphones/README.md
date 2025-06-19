@@ -1,10 +1,20 @@
-# 🎧 Headphones Landing Page
+# 🎧 Headphones Project – What We Do Section
 
-This is a responsive web page built using HTML and CSS based on a Figma design from ALX.
+This is the second task in the ALX Front-End Web Development curriculum.  
+You will extend your previous project by adding the **“What we do…”** section below the header and hero.
 
-## 💻 How to Use
+---
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/alx_html_css.git
-   cd alx_html_css/headphones
+## 🏗️ Task Overview
+
+- Copy files from the previous task (`0-index.html` and `0-styles.css`) as starting point.
+- Add a new **“What we do…”** section.
+- Use **custom font icons** provided in the archive `holberton_school-icon.zip`.
+- Build generic and reusable components, as they will be needed in next sections.
+- Maintain consistency with previous styles and responsiveness.
+- Use semantic HTML and simple CSS selectors.
+
+---
+
+## 📂 Project Structure
+
