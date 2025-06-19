@@ -1,0 +1,117 @@
+/* Reset default browser styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set variables */
+:root {
+  --main-color: #ffffff;
+  --accent-color: #ff6565;
+  --bg-image: url("images/headphones_hero_1.jpg");
+  --font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Basic styling */
+body {
+  font-family: var(--font-family);
+  background-color: #000;
+  color: var(--main-color);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+.header {
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 160px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--main-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+  color: var(--accent-color);
+}
+
+/* Hero text */
+.hero {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+/* Button */
+.btn {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 12px 25px;
+  }
+}
